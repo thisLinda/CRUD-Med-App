@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  background-image: linear-gradient(90deg, #410076, #8820dd);
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+/* How to achieve this searchbox render? https://www.geeksforgeeks.org/how-to-create-dynamic-search-box-in-reactjs/
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .App {
   text-align: center;
 }
@@ -26,13 +52,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} */
