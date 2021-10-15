@@ -2,27 +2,57 @@
 
 import React, {useState} from 'react';
 import './SearchMeds.css';
-import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from '@mui/icons-material/Close';
-import Data from '../Data.json';
-import App from '../App';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import CancelPresentationOutlinedIcon from '@mui/icons-material/CancelPresentationOutlined';
 
-function SearchMed() {
+function SearchMed({placeholder, data }) {
+  const [filteredData, setFilteredData] = useState([]);
   const[searchTerm, setSearchTerm] = useState('');
+
+  const handleFilter = (event) => {
+    const searchTerm = event.target.value;
+    setSearchTerm(searchTerm);
+    const newFilter = data.filter((value) => {
+      return value.genericName.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    if (searchTerm === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
+    }
+  };
+  const clearInput = () => {
+    setFilteredData([]);
+    setSearchTerm("");
+  };
   return (
-    <div className="App">
-      <input type="text" placeholder="Searrrrrch" onChange={event => {setSearchTerm(event.target.value)}}/>
-      {Data.filter((val) => {
-        if (searchTerm === "") {
-          return val
-        } else if (val.brandName.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return val
-        }
-      }).map((val, key) => {
-        return <div className="user" key={key}>
-          <p>{val.brandName}</p>
-        </div>;
-      })}
+    <div className="search">
+      <div className="searchIinputs">
+        <input 
+          type="text" 
+          placeholder={placeholder}
+          value={searchTerm}
+          onChange={handleFilter}
+        />
+        <div className="searchIcon">
+          {filteredData.length === 0 ? (
+            <SearchOutlinedIcon />
+          ) : (
+            <CancelPresentationOutlinedIcon id="clearBtn" onClick={clearInput} />
+          )}
+        </div>
+      </div>
+      {filteredData.length !== 0 && (
+        <div className="dataResult">
+          {filteredData.slice(0, 5).map((value, key) => {
+            return (
+              <a className="dataItem" href={value.link} target="_blank">
+                <p>{value.genericName} </p>
+              </a>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
