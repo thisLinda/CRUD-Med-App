@@ -1,4 +1,4 @@
-const meds= [
+const dBase = [
   {
     "_id": 0,
     "genericName": "haloperidol",
@@ -36,3 +36,5 @@ const meds= [
     "reaction": "tardive dyskinesia"
   }
 ];
+
+export default dBase;

@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from "react";
 import './App.css';
-import SearchMeds from './components/SearchMeds';
-import Data from './Data.json';
+// import SearchMeds from './components/SearchMeds';
+import UsersMedList from './components/UsersMedList';
 
-function App() {
+const App = () => {
+
+  // const [updating, setUpdating] = useState(false);
+  // const initialMed = {_id: null, brandName: '', reaction: ''};
+  // const [currentMed, setCurrentMed] = useState(initialMed);
+
   return (
-    <div className="App">
-      <SearchMeds placeholder="Enter a Medication Name" data={Data} />
+    <div className="usersMedList">
+      <UsersMedList />
     </div>
   );
 }

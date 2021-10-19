@@ -4,6 +4,11 @@
 resources.js
 DNUSearchMed.js
 DNUApp.js
+DNUMedList.js
+2AddMed.js
+2SearchMeds.js
+2UsersMedList.js
+2App.js
 
 # dependencies
 /node_modules
