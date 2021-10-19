@@ -16,7 +16,7 @@ const CreateMed = (props) => {
     };
 
   return (
-    <div className="viewUsers">
+    <div className="viewMeds">
       <MedTable meds={meds} />
     </div>
     
