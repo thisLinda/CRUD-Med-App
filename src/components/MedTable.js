@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Table from 'react-bootstrap/Table'
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -24,9 +25,9 @@ const MedTable = (props) => {
               <td>{props.brandName}</td>
               <td>{props.reaction}</td>
               <td>
-                <Button variant="contained" endIcon={<SendIcon />}>
+                {/* <Button variant="contained" endIcon={<SendIcon />}>
                   Add
-                </Button>
+                </Button> */}
                 <Button variant="outlined" startIcon={<DeleteIcon />}>
                   Delete
                 </Button>
