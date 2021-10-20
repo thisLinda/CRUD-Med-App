@@ -10,19 +10,39 @@ import SendIcon from '@mui/icons-material/Send';
 
 const CreateMed = (props) => {
 
-  const createMed = {_id: null, genericName: '', brandName: ''};
-  const [med, setMed] = useState(createMed);
+  // const createMed = {_id: null, brandName: "", genericName: "", reaction: ""};
+  const [medValue, setMedValue] = useState("");
 
-  const handleChange = e => {
-    const {brandName, value} = e.target;
-    setMed({...med, [brandName]: value});
+  const [brandNameValue, setBrandNameValue] = useState("");
+  const [genericNameValue, setGenericNameValue] = useState("");
+  const [reactionValue, setReactionValue] = useState("");
+  
+  const handleMedChange = e => setMedValue(e.target.value);
+  // const handleGenericNameChange = e => setGenericNameValue(e.target.value);
+  // const handleReactionChange = e => setReactionValue(e.target.value);
+    
+  const handleBrandNameSubmit = () => {
+    const brandNameData = {
+      name: brandNameValue
+    }
+    setBrandNameValue("");
+    props.createBrandNameMed(brandNameData)
   }
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (med.brandName && med.genericName && med.reaction) {
-      handleChange(e, props.NewMed(med));
+  const handleGenericNameSubmit = () => {
+    const genericNameData = {
+      name: genericNameValue
     }
+    setGenericNameValue("");
+    props.createGenericNameMed(genericNameData);
+  }
+
+  const handleReactionSubmit = () => {
+    const reactionData = {
+      name: reactionValue
+    }
+    setReactionValue("");
+    props.createReactionMed(reactionData);
   }
 
   // TODO: cursor to next box on enter
@@ -31,21 +51,21 @@ const CreateMed = (props) => {
       <h2>Enter New Medication Information</h2>
     <Form>
     <Form.Group controlId="medBrandName">
-      <Form.Label>Enter Brand Name:</Form.Label>
-      <Form.Control placeholder="Brand Name" />
+      <Form.Label value={brandNameValue}>Enter Brand Name:</Form.Label>
+      <Form.Control onChange={handleBrandNameSubmit} placeholder="Brand Name" />
     </Form.Group>
     <Form.Group controlId="medGenericName">
-      <Form.Label>Enter Generic Name:</Form.Label>
-      <Form.Control placeholder="Generic Name" />
+      <Form.Label value={genericNameValue}>Enter Generic Name:</Form.Label>
+      <Form.Control onChange={handleGenericNameSubmit} placeholder="Generic Name" />
     </Form.Group>
     <Form.Group controlId="medReaction">
-      <Form.Label>Enter Reaction:</Form.Label>
-      <Form.Control placeholder="Severe Adverse Reaction" />
+      <Form.Label value={reactionValue}>Enter Reaction:</Form.Label>
+      <Form.Control onChange={handleReactionSubmit} placeholder="Severe Adverse Reaction" />
     </Form.Group>
       {/* <Form.Label onChange={handleChange}>{med.brandName}>Enter Brand Name</Form.Label>
       <Form.Label onChange={handleChange}>{med.genericName}>Enter Generic Name</Form.Label>
       <Form.Label onChange={handleChange}>{med.reaction}>Enter Reaction</Form.Label> */}
-    <Button onClick={handleSubmit} variant="contained" sendIcon={<SendIcon />}>Add Medication</Button>
+    <Button onClick={handleMedChange} variant="contained" sendIcon={<SendIcon />}>Add Medication</Button>
     </Form>
     </div>
   )
