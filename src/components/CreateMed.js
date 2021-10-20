@@ -10,14 +10,16 @@ import SendIcon from '@mui/icons-material/Send';
 
 const CreateMed = (props) => {
 
-  // const createMed = {_id: null, brandName: "", genericName: "", reaction: ""};
-  const [medValue, setMedValue] = useState("");
+  const createMed = {_id: null, brandName: "", genericName: "", reaction: ""};
+  const [createMedValue, setCreateMedValue] = useState(createMed);
+  // const [medValue, setMedValue] = useState(createMed);
+  // const [medValue, setMedValue] = useState("");
 
   const [brandNameValue, setBrandNameValue] = useState("");
   const [genericNameValue, setGenericNameValue] = useState("");
   const [reactionValue, setReactionValue] = useState("");
   
-  const handleMedChange = e => setMedValue(e.target.value);
+  const handleMedChange = e => setCreateMedValue(e.target.value);
   // const handleGenericNameChange = e => setGenericNameValue(e.target.value);
   // const handleReactionChange = e => setReactionValue(e.target.value);
     
