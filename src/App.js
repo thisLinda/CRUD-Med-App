@@ -11,9 +11,12 @@ const App = () => {
 
   const [meds, setMeds] = useState(medsList);
 
+  // add new/created med to array with push
   const createMed = med => {
       med._id = meds.length + 1;
-      setMeds([...meds, med]);
+      const arr = [...meds];
+      arr.push(med);
+      setMeds(arr);
   };
 
   // const [updating, setUpdating] = useState(false);

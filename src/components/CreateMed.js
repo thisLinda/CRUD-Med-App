@@ -1,5 +1,4 @@
-// this component adds a new medication and user clicks a button to create new med, returns it into a list BUT does it need to return into list????
-// the new med, once created by the user, needs to be added to the array and table
+// this component creates and adds a new medication on user clicks, returns it into MedTable
 import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from '@mui/material/Button';
@@ -8,7 +7,6 @@ import SendIcon from '@mui/icons-material/Send';
 const CreateMed = (props) => {
 
   const createMed = {_id: null, brandName: "", genericName: "", reaction: ""};
-  const [createMedValue, setCreateMedValue] = useState("");
   
   const [brandNameValue, setBrandNameValue] = useState("");
   const [genericNameValue, setGenericNameValue] = useState("");
@@ -20,13 +18,13 @@ const CreateMed = (props) => {
     
   const handleMedSubmit = () => {
     const createMedData = {
-      name: createMedValue
+      brandName: brandNameValue,
+      genericName: genericNameValue,
+      reaction: reactionValue
     }
-    setCreateMedValue("");
     props.createMed(createMedData)
   }
 
-  // TODO: cursor to next box on enter
   return (
     <div className="createMed">
       <h2>Enter New Medication Information</h2>
