@@ -5,9 +5,6 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
 const CreateMed = (props) => {
-
-  const createMed = {_id: null, brandName: "", genericName: "", reaction: ""};
-  
   const [brandNameValue, setBrandNameValue] = useState("");
   const [genericNameValue, setGenericNameValue] = useState("");
   const [reactionValue, setReactionValue] = useState("");
