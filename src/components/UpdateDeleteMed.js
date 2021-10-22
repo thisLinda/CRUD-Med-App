@@ -9,9 +9,9 @@ const UpdateDeleteMed = ({med, updateMed}) => {
   const [isEdit, setIsEdit] = useState(false);
 
   const [formData, setFormData] = useState({
-    brandName: "my",
-    genericName: "stomach",
-    reaction: "hurts",
+    brandName: "",
+    genericName: "",
+    reaction: "",
     submitted: false,
   });
 
@@ -20,24 +20,28 @@ const UpdateDeleteMed = ({med, updateMed}) => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    console.log('inside the handleChange')
     // code 
   }
 
   const handleEditClick = (e) => {
     e.preventDefault();
     setIsEdit(!isEdit);
+    // this log appears when edit is clicked
+    console.log('inside handleEditClick')
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('inside the handleSubmit!!!!before the not a function')
-    // updateMed(formData);
-    console.log('inside the handleSubmit!!!!')
+    updateMed(formData);
     setIsEdit(false);
+    // log message appeared when I clicked submit
+    console.log('inside handleSubmit')
   }
 
   const {genericName, brandName, reaction} = med;
 
+  // https://reactjs.org/docs/hooks-effect.html
   useEffect(() => {
     if (isEdit) {
       setFormData(med);

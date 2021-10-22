@@ -13,13 +13,31 @@ const CreateMed = (props) => {
   const handleGenericNameChange = e => setGenericNameValue(e.target.value);
   const handleReactionChange = e => setReactionValue(e.target.value);
     
+  // const handleReset = (e) => {
+  //   createMedData = ""
+  //   // brandNameValue: "",
+  //   // genericNameValue: "",
+  //   // reactionValue: ""
+  //   e.target.createMedData.value = ""
+  // }
+
   const handleMedSubmit = () => {
     const createMedData = {
       brandName: brandNameValue,
       genericName: genericNameValue,
       reaction: reactionValue
     }
-    props.createMed(createMedData)
+    props.createMed(createMedData);
+    handleReset();
+  }
+
+  const handleReset = () => {
+    const createMedData = {
+      brandName: brandNameValue,
+      genericName: genericNameValue,
+      reaction: reactionValue
+    }
+    createMedData.value = "";
   }
 
   return (
