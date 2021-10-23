@@ -8,7 +8,7 @@
 // } from 'react-router-dom';
 // import React, { useState } from 'react';
 import './App.css';
-// import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container';
 import Navigation from './components/Navigation';
 // import Home from './components/Home'
 // import CreateMed from './components/CreateMed';
@@ -45,7 +45,10 @@ const App = () => {
   // };
 
   return (
-    <Navigation />
+    <Container className="App">
+      <Navigation />
+    </Container>
+    
     // <Container>
     //   <div center className="container">
     //     <CreateMed createMed={createMed} />

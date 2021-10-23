@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   font-family: "Nunito", sans-serif;
-  background-image: linear-gradient(90deg, #410076, #8820dd);
+  height: 100vh;
+  width: 100vw;
 }
 
 *:before,*:after{
@@ -19,3 +18,12 @@ body {
   padding: 0;
   margin: 0;
 }
+
+a.navbar-brand {
+  margin-left: .5rem;
+}
+
+/* @media (max-width: @screen-xs-max) { ... }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { ... } */

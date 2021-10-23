@@ -1,5 +1,7 @@
-npm install react-router-dom
-https://airbnb.io/javascript/react/#naming
+# This project is incomplete.
+
+Router hook-up resulted in broken functionality. Clicking `Add Medication` button in `CreateMed` no longer adds the medication to `MedTable`, column shifting on `Edit` click in `UpdateDeleteMed` form. Navigation does not work on click of `Add Medication`, some google links with code utilized commented on page, `localhost:3000/list` pops up in lower left corner but the page does not change.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

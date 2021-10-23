@@ -29,11 +29,11 @@ const Navigation = () => {
 
   return(
     <container>
-      <div className="row">
+      <div className="nav-row">
         <div className="col-md-12">
           <Router>
             <Navbar bg="primary" variant="dark" expand="lg" sticky="top">
-              <Navbar.Brand href="#home">Medications with Possible Severe Adverse Reaction on Swallow Function</Navbar.Brand>
+              <Navbar.Brand href="home">Medications with Possible Severe Adverse Reaction on Swallow Function</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

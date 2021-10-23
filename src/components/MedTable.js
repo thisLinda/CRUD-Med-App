@@ -7,7 +7,7 @@ import UpdateDeleteMed from './UpdateDeleteMed';
 // props received from CreateMeds
 const MedTable = (props) => {
  return (
-   <Table striped bordered hover>
+   <Table className="table table-hover" striped bordered hover>
     <thead>
       <tr>
         <th>Brand Name</th>
