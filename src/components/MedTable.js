@@ -3,6 +3,7 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import UpdateDeleteMed from './UpdateDeleteMed';
 
+
 // props received from CreateMeds
 const MedTable = (props) => {
  return (
@@ -17,7 +18,7 @@ const MedTable = (props) => {
     <tbody>
       {props.meds.map(med => {
           return (
-            <UpdateDeleteMed med={med} updateMed={props.updateMed} />
+            <UpdateDeleteMed med={med} updateMed={props.updateMed} UpdateDeleteMed={props.deleteMed} />
           )
         })
       }

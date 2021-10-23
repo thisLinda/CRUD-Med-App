@@ -11,6 +11,7 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 // import NavBar from './components/NavBar';
 // import Home from './components/Home'
+import UpdateDeleteMed from './components/UpdateDeleteMed';
 import CreateMed from './components/CreateMed';
 import MedTable from './components/MedTable';
 import medsList from './data';
@@ -32,6 +33,18 @@ const App = () => {
     setMeds(arr);
   };
 
+  const deleteMed = (_id) => {
+    setMeds(meds.filter((med) => med._id !== _id));
+  };
+
+  // const deleteMed = med => {
+  //   const arr = [...meds];
+  //   arr[med._id] = med;
+  //   arr.filter(_id => med !== med);
+  //   setMeds(arr);
+  //   console.log(deleteMed(med));
+  // };
+
   return (
     // <NavBar />
 
@@ -40,7 +53,7 @@ const App = () => {
         <CreateMed createMed={createMed} />
         <h1>Medications with Known Possible Adverse Reactions</h1>
         <h2>Dysphagia</h2>
-        <MedTable meds={meds} updateMed={updateMed} />
+        <MedTable meds={meds} updateMed={updateMed} deleteMed={deleteMed} />
       </div>
     </Container>
     // <Container>

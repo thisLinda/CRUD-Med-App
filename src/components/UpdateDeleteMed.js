@@ -5,10 +5,11 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 
 // export default function UpdateDeleteMed({ med, updateMed }) {
-const UpdateDeleteMed = ({med, updateMed}) => {
+const UpdateDeleteMed = ({med, updateMed, _id}) => {
   const [isEdit, setIsEdit] = useState(false);
 
   const [formData, setFormData] = useState({
+    _id: "_id",
     brandName: "",
     genericName: "",
     reaction: "",
@@ -25,6 +26,12 @@ const UpdateDeleteMed = ({med, updateMed}) => {
   const handleEditClick = (e) => {
     e.preventDefault();
     setIsEdit(!isEdit);
+  }
+
+  const handleDeleteClick = (e) => {
+    e.preventDefault();
+    deleteMed(_id);
+    setIsEdit(false);
   }
 
   const handleSubmit = (e) => {
@@ -44,7 +51,8 @@ const UpdateDeleteMed = ({med, updateMed}) => {
 
   if (isEdit) {
     return (
-      <tr>
+      <tr key={_id}>
+        <td>{_id}</td>
         <td>
           <input type="text" name="brandName" value={formData.brandName} onChange={handleChange} />
         </td>
@@ -55,7 +63,7 @@ const UpdateDeleteMed = ({med, updateMed}) => {
           <input type="text" name="reaction" value={formData.reaction} onChange={handleChange} />
         </td>
         <td>
-        <Button variant="outlined" startIcon={<DeleteIcon />}>
+        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleDeleteClick}>
           Delete
         </Button>
         <Button variant="contained" sendIcon={<SendIcon />} onClick={handleEditClick}>
