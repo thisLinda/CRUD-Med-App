@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useParams,
 } from "react-router-dom";
-import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 import Home from './Home';
 import CreateMed from './CreateMed';
 import MedTable from './MedTable';
 import medsList from '../data';
 
-const NavBar = () => {
+const Navigation = () => {
   const [meds, setMeds] = useState(medsList);
 
   // add new/created med to array with push
@@ -49,10 +48,10 @@ const NavBar = () => {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route path="/add">
+              <Route exact path="/add">
                 <CreateMed createMed={createMed} />
               </Route>
-              <Route path="/list">
+              <Route exact path="/list">
                 <MedTable meds={meds} updateMed={updateMed} />
               </Route>
             </Switch>
@@ -63,4 +62,4 @@ const NavBar = () => {
   )  
 }
 
-export default Navbar;
+export default Navigation;

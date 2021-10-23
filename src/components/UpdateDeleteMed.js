@@ -28,11 +28,11 @@ const UpdateDeleteMed = ({med, updateMed, _id}) => {
     setIsEdit(!isEdit);
   }
 
-  const handleDeleteClick = (e) => {
-    e.preventDefault();
-    deleteMed(_id);
-    setIsEdit(false);
-  }
+  // const handleDeleteClick = (e) => {
+  //   e.preventDefault();
+  //   deleteMed(_id);
+  //   setIsEdit(false);
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,7 +63,7 @@ const UpdateDeleteMed = ({med, updateMed, _id}) => {
           <input type="text" name="reaction" value={formData.reaction} onChange={handleChange} />
         </td>
         <td>
-        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleDeleteClick}>
+        <Button variant="outlined" startIcon={<DeleteIcon />}>
           Delete
         </Button>
         <Button variant="contained" sendIcon={<SendIcon />} onClick={handleEditClick}>
