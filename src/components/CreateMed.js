@@ -12,49 +12,36 @@ const CreateMed = (props) => {
   const handleBrandNameChange = e => setBrandNameValue(e.target.value);
   const handleGenericNameChange = e => setGenericNameValue(e.target.value);
   const handleReactionChange = e => setReactionValue(e.target.value);
-    
-  // const handleReset = (e) => {
-  //   createMedData = ""
-  //   // brandNameValue: "",
-  //   // genericNameValue: "",
-  //   // reactionValue: ""
-  //   e.target.createMedData.value = ""
-  // }
 
-  const handleMedSubmit = () => {
+  const handleMedSubmit = (e) => {
+    e.preventDefault();
     const createMedData = {
       brandName: brandNameValue,
       genericName: genericNameValue,
       reaction: reactionValue
     }
     props.createMed(createMedData);
-    handleReset();
+    setBrandNameValue("")
+    setGenericNameValue("")
+    setReactionValue("")
   }
 
-  const handleReset = () => {
-    const createMedData = {
-      brandName: brandNameValue,
-      genericName: genericNameValue,
-      reaction: reactionValue
-    }
-    createMedData.value = "";
-  }
-
+  // code was not clearing from input after submit because values were in Form.Label instead of Form.Control
   return (
     <div className="createMed">
       <h2>Enter New Medication Information</h2>
     <Form>
     <Form.Group controlId="medBrandName">
-      <Form.Label value={brandNameValue}>Enter Brand Name:</Form.Label>
-      <Form.Control onChange={handleBrandNameChange} placeholder="Brand Name" />
+      <Form.Label>Enter Brand Name:</Form.Label>
+      <Form.Control value={brandNameValue} onChange={handleBrandNameChange} placeholder="Brand Name" />
     </Form.Group>
     <Form.Group controlId="medGenericName">
-      <Form.Label value={genericNameValue}>Enter Generic Name:</Form.Label>
-      <Form.Control onChange={handleGenericNameChange} placeholder="Generic Name" />
+      <Form.Label>Enter Generic Name:</Form.Label>
+      <Form.Control value={genericNameValue} onChange={handleGenericNameChange} placeholder="Generic Name" />
     </Form.Group>
     <Form.Group controlId="medReaction">
-      <Form.Label value={reactionValue}>Enter Reaction:</Form.Label>
-      <Form.Control onChange={handleReactionChange} placeholder="Severe Adverse Reaction" />
+      <Form.Label>Enter Reaction:</Form.Label>
+      <Form.Control value={reactionValue} onChange={handleReactionChange} placeholder="Severe Adverse Reaction" />
     </Form.Group>
     <Button onClick={handleMedSubmit} variant="contained" sendIcon={<SendIcon />}>Add Medication</Button>
     </Form>

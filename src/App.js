@@ -1,7 +1,16 @@
 // receives meds from CreateMeds and displays in a table, TODO: route to different pages
-import React, {useState} from 'react';
+// import {
+//   BrowserRouter as Router,
+//   Route, 
+//   Link, 
+//   Switch,
+//   useRouteMatch
+// } from 'react-router-dom';
+import React, { useState } from 'react';
 import './App.css';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
+// import NavBar from './components/NavBar';
+// import Home from './components/Home'
 import CreateMed from './components/CreateMed';
 import MedTable from './components/MedTable';
 import medsList from './data';
@@ -24,6 +33,8 @@ const App = () => {
   };
 
   return (
+    // <NavBar />
+
     <Container>
       <div center className="container">
         <CreateMed createMed={createMed} />
@@ -32,6 +43,36 @@ const App = () => {
         <MedTable meds={meds} updateMed={updateMed} />
       </div>
     </Container>
+    // <Container>
+    //   <Router>
+    //     <div>
+    //       <ul>
+    //         <li>
+    //           <Link to="/">Home</Link>
+    //         </li>
+    //         <li>
+    //           <Link to="/add">Add a Medication</Link>
+    //         </li>
+    //         <li>
+    //           <Link to="/medications">Medication Table</Link>
+    //         </li>
+    //       </ul>
+    //       <Switch>
+    //         <Route path="/add">
+    //           <CreateMed createMed={createMed} />
+    //         </Route>
+    //         <Route path="/list">
+    //           <h1>Medications with Known Possible Adverse Reactions</h1>
+    //           <h2>Dysphagia</h2>
+    //           <MedTable meds={meds} updateMed={updateMed} />
+    //         </Route>
+    //         <Route path="/">
+    //           <Home />
+    //         </Route>
+    //       </Switch>
+    //     </div>
+    //   </Router>
+    // </Container>
   );
 }
 
