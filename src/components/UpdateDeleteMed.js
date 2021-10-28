@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 
-const UpdateDeleteMed = ({med, updateMed}) => {
+const UpdateDeleteMed = ({med, updateMed, deleteMed}) => {
   const [isEdit, setIsEdit] = useState(false);
 
   const [formData, setFormData] = useState({

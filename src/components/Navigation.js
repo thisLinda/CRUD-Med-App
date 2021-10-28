@@ -27,9 +27,9 @@ const Navigation = () => {
     setMeds(arr);
   };
 
-  // const deleteMed = _id => {
+  // const deleteMed = med => {
   //   const arr = [...meds];
-  //   console.log('inside deleteMed')
+  //   console.log('inside deleteMed in nav')
   //   _id = meds.filter(m => m._id !== _id);
   //   setMeds();
   // }
