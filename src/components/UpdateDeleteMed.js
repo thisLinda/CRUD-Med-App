@@ -4,12 +4,12 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 
-// export default function UpdateDeleteMed({ med, updateMed }) {
-const UpdateDeleteMed = ({med, updateMed, _id}) => {
+const UpdateDeleteMed = ({med, updateMed}) => {
   const [isEdit, setIsEdit] = useState(false);
 
   const [formData, setFormData] = useState({
-    _id: "_id",
+    // _id is not a string
+    _id: 99,
     brandName: "",
     genericName: "",
     reaction: "",
@@ -28,11 +28,15 @@ const UpdateDeleteMed = ({med, updateMed, _id}) => {
     setIsEdit(!isEdit);
   }
 
-  // const handleDeleteClick = (e) => {
-  //   e.preventDefault();
-  //   deleteMed(_id);
-  //   setIsEdit(false);
-  // }
+  const handleDeleteClick = (e) => {
+    // e.preventDefault();
+    console.log('inside handleDeleteClick before deleteMed')
+    // deleteMed(formData);
+    deleteMed();
+    console.log(med._id)
+    console.log('inside handleDeleteClick after deleteMed click!!!!')
+    // setIsEdit(false);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +44,7 @@ const UpdateDeleteMed = ({med, updateMed, _id}) => {
     setIsEdit(false);
   }
 
-  const {genericName, brandName, reaction} = med;
+  const {_id, brandName, genericName, reaction} = med;
 
   // https://reactjs.org/docs/hooks-effect.html
   useEffect(() => {
@@ -51,8 +55,7 @@ const UpdateDeleteMed = ({med, updateMed, _id}) => {
 
   if (isEdit) {
     return (
-      <tr key={_id}>
-        <td>{_id}</td>
+      <tr>
         <td>
           <input type="text" name="brandName" value={formData.brandName} onChange={handleChange} />
         </td>
@@ -63,7 +66,7 @@ const UpdateDeleteMed = ({med, updateMed, _id}) => {
           <input type="text" name="reaction" value={formData.reaction} onChange={handleChange} />
         </td>
         <td>
-        <Button variant="outlined" startIcon={<DeleteIcon />}>
+        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleDeleteClick}>
           Delete
         </Button>
         <Button variant="contained" sendIcon={<SendIcon />} onClick={handleEditClick}>
@@ -84,7 +87,7 @@ const UpdateDeleteMed = ({med, updateMed, _id}) => {
       <td>{genericName}</td>
       <td>{reaction}</td>
       <td>
-      <Button variant="outlined" startIcon={<DeleteIcon />}>
+      <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleDeleteClick}>
         Delete
       </Button>
       <Button variant="contained" sendIcon={<SendIcon />} onClick={handleEditClick}>

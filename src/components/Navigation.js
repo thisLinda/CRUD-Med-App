@@ -4,7 +4,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import {Navbar, Nav} from 'react-bootstrap'
+import {Navbar, Nav, Container} from 'react-bootstrap';
 import Home from './Home';
 import CreateMed from './CreateMed';
 import MedTable from './MedTable';
@@ -15,7 +15,7 @@ const Navigation = () => {
 
   // add new/created med to array with push
   const createMed = med => {
-      med._id = meds.length + 1;
+      med._id = meds.length;
       const arr = [...meds];
       arr.push(med);
       setMeds(arr);
@@ -27,8 +27,25 @@ const Navigation = () => {
     setMeds(arr);
   };
 
+  // const deleteMed = _id => {
+  //   const arr = [...meds];
+  //   console.log('inside deleteMed')
+  //   _id = meds.filter(m => m._id !== _id);
+  //   setMeds();
+  // }
+
+  const deleteMed = _id => {
+    // const arr = [...meds];
+    // const arr = setMeds(meds.filter((med) => med._id !== _id));
+    (console.log('inside deleteMed in nav'))
+    // setMeds(arr);
+    // setMeds(arr);
+  };
+
+  // deleteMed()
+
   return(
-    <container>
+    <Container>
       <div className="nav-row">
         <div className="col-md-12">
           <Router>
@@ -52,13 +69,14 @@ const Navigation = () => {
                 <CreateMed createMed={createMed} />
               </Route>
               <Route exact path="/list">
-                <MedTable meds={meds} updateMed={updateMed} />
+                {/* <MedTable med={med} updateMed={updateMed} deleteMed={deleteMed} />  */}
+                <MedTable meds={meds} updateMed={updateMed} deleteMed={deleteMed} />
               </Route>
             </Switch>
           </Router>
         </div>
       </div>
-    </container>
+    </Container>
   )  
 }
 

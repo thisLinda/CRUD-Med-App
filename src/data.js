@@ -1,38 +1,38 @@
 const medsList = [
   {
     _id: 0,
+    brandName: "Haldol",
     genericName: "haloperidol",
-    brandName: "haldol",
     reaction: "tardive dyskinesia"
   },
   {
     _id: 1,
-    genericName: "tetracycline",
     brandName: "Pylera",
+    genericName: "tetracycline",
     reaction: "esophageal stricture"
   },
   {
     _id: 2,
+    brandName: "Fosamax",
     genericName: "alendronate sodium",
-    brandName: "fosamax",
     reaction: "esophageal ulceration"
   },
   {
     _id: 3,
+    brandName: "Neurontin",
     genericName: "gabapentin",
-    brandName: "neurontin",
     reaction: "dehydration"
   },
   {
     _id: 4,
+    brandName: "Gablofen",
     genericName: "baclofen",
-    brandName: "gablofen",
     reaction: "bronchospasm"
   },
   {
     _id: 5,
+    brandName: "Oxybutynin",
     genericName: "ditropan",
-    brandName: "oxybutynin",
     reaction: "tardive dyskinesia"
   }
 ]

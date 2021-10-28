@@ -18,7 +18,7 @@ import Navigation from './components/Navigation';
 const App = () => {
   // const [meds, setMeds] = useState(medsList);
 
-  // add new/created med to array with push
+  // // add new/created med to array with push
   // const createMed = med => {
   //     med._id = meds.length + 1;
   //     const arr = [...meds];
@@ -48,15 +48,16 @@ const App = () => {
     <Container className="App">
       <Navigation />
     </Container>
-    
     // <Container>
     //   <div center className="container">
     //     <CreateMed createMed={createMed} />
     //     <h1>Medications with Known Possible Adverse Reactions</h1>
     //     <h2>Dysphagia</h2>
-    //     <MedTable meds={meds} updateMed={updateMed} deleteMed={deleteMed} />
+    //     <MedTable meds={meds} updateMed={updateMed} />
+    //     {/* <MedTable meds={meds} updateMed={updateMed} deleteMed={deleteMed} /> */}
     //   </div>
     // </Container>
+
     // <Container>
     //   <Router>
     //     <div>

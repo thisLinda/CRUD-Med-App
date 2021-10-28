@@ -3,9 +3,10 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import UpdateDeleteMed from './UpdateDeleteMed';
 
-
 // props received from CreateMeds
 const MedTable = (props) => {
+  console.log(props)
+  console.log('hello world')
  return (
    <Table className="table table-hover" striped bordered hover>
     <thead>
@@ -18,7 +19,7 @@ const MedTable = (props) => {
     <tbody>
       {props.meds.map(med => {
           return (
-            <UpdateDeleteMed med={med} updateMed={props.updateMed} UpdateDeleteMed={props.deleteMed} />
+            <UpdateDeleteMed med={med} updateMed={props.updateMed} deleteMed={props.deleteMed} />
           )
         })
       }
