@@ -29,32 +29,10 @@ const Navigation = () => {
     setMeds(arr);
   };
 
-  // const deleteMed = med => {
-  //   const arr = [...meds];
-  //   console.log('inside deleteMed in nav')
-  //   let _id = meds.filter(m => m._id !== _id);
-  //   setMeds();
-  // }
-
-  // const deleteMed = _id => {
-  //   const arr = [...meds];
-  //   console.log(meds) // meds array logged
-  //   console.log(_id)
-
-  //   // arr[med.id] = _id;
-  //   setMeds(meds.filter(m => m._id !== _id));
-  //   // console.log(m) // logs `m is not defined`
-  //   // arr = setMeds(meds.filter(m => m._id !== _id));
-  //   // setMeds(meds.filter((med) => med._id !== _id));
-  //   setMeds(arr);
-  //   console.log(setMeds)
-  // };
-
-  // deleteMed()
-
   const deleteMed = medsId => {
     const deleteMeds = meds.filter((m) => m._id !== medsId);
     setMedsId(deleteMeds);
+    console.log('inside deleteMed: ')
   }
 
   return(

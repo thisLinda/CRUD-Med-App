@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 
-const UpdateDeleteMed = ({med, updateMed, deleteMed}) => {
+const UpdateDeleteMed = ({med, medsId, updateMed, deleteMed}) => {
   const [isEdit, setIsEdit] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -27,28 +27,20 @@ const UpdateDeleteMed = ({med, updateMed, deleteMed}) => {
     setIsEdit(!isEdit);
   }
 
-  // 
-  
   const handleDeleteClick = (e) => {
     e.preventDefault();
-    // deleteMed(formData);
-    console.log("this is formData in handleDeleteClick" + formData) // logs object Object
-    // console.log("this is _id in handleDeleteClick" + _id) // doesn't compile because `_id is not defined`
-    console.log("this is med in handleDeleteClick" + med) // object Object
-    // console.log("this is meds in handleDeleteClick" + meds) // doesn't compile because `meds is not defined`
     console.log("this is genericName in handleDeleteClick " + genericName) // gold! this logged the generic name of the med I clicked delete on!
     // deleteMed([0]);
     deleteMed(medsId);
-    // setIsEdit(false);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     updateMed(formData);
-    setIsEdit(false);
+    setIsEdit(!isEdit)
   }
 
-  const {medsId, brandName, genericName, reaction} = med;
+  const {brandName, genericName, reaction} = med;
 // you're using useEffect to fill the form if they're editing. I don't think you need to do that. You should be able to just set the initalState of the form data to be the data in med.
   // https://reactjs.org/docs/hooks-effect.html
   useEffect(() => {

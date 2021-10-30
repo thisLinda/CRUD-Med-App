@@ -15,6 +15,7 @@ const MedTable = (props) => {
       </tr>
     </thead>
     <tbody>
+    {/* {arrayOfData.map(dataItem => <NameOfComponent propName={dataItem} key={dataItem.uniqueProperty} /> )} */}
       {props.meds.map(med => {
           return (
             <UpdateDeleteMed med={med} key={props.medsId} updateMed={props.updateMed} deleteMed={props.deleteMed} />
