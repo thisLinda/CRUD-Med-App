@@ -5,8 +5,6 @@ import UpdateDeleteMed from './UpdateDeleteMed';
 
 // props received from CreateMeds
 const MedTable = (props) => {
-  console.log(props)
-  console.log('hello world')
  return (
    <Table className="table table-hover" striped bordered hover>
     <thead>
@@ -19,7 +17,7 @@ const MedTable = (props) => {
     <tbody>
       {props.meds.map(med => {
           return (
-            <UpdateDeleteMed med={med} updateMed={props.updateMed} deleteMed={props.deleteMed} />
+            <UpdateDeleteMed med={med} key={props.medsId} updateMed={props.updateMed} deleteMed={props.deleteMed} />
           )
         })
       }
