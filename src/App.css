@@ -9,9 +9,9 @@
 }
 
 *:before,*:after{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -19,6 +19,12 @@ body {
   margin: 0;
 }
 
-a.navbar-brand {
+/* a.navbar-brand {
+  display: flex;
+  flex-direction: column;
   margin-left: .5rem;
-}
+  /* width: 100vw;  */
+  /* width: 100vh;
+
+#basic-navbar-nav {
+  align-items: center; */
