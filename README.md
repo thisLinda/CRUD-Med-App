@@ -1,14 +1,14 @@
-# This project is ~~incomplete.~~ COMPLETE for project requirements!
-## ~~But it's getting there 🙂~~ Got it!
+# This is ~~incomplete.~~ ... now COMPLETE for project requirements!
+## ~~But it's getting there 🙂~~  Got it!
 ## Moving on to:
 
-Do not need `useEffect` in updateDeleteMed
-Improve styling
-Improve responsiveness
-Address accessibility
-Refine components (`updateDeleteMed`)
-Find API, hook up search including search by both generic and brand names, severity
-Add field for degree of severity
+#### Do not need `useEffect` in updateDeleteMed
+- Improve styling
+- Improve responsiveness
+- Address accessibility
+- Refine components (`updateDeleteMed`)
+- Find API, hook up search including search by both generic and brand names, severity
+- Add field for degree of severity
 
 
 ~~Delete medication not achieved,~~ ~~consistent error of "deleteMed is not defined."~~ ~~Router hook-up resulted in broken functionality.~~ ~~Clicking `Add Medication` button in `CreateMed` no longer adds the medication to `MedTable`, column shifting on `Edit` click in `UpdateDeleteMed` form. Navigation does not work on click of `Add Medication`,~~ ~~some google links with code utilized commented on page, `localhost:3000/list` pops up in lower left corner but the page does not change.~~
