@@ -31,7 +31,7 @@ const UpdateDeleteMed = ({med, medsId, updateMed, deleteMed}) => {
     e.preventDefault();
     console.log("this is genericName in handleDeleteClick " + genericName) // gold! this logged the generic name of the med I clicked delete on!
     // deleteMed([0]);
-    deleteMed(medsId);
+    deleteMed(med._id);
   }
 
   const handleSubmit = (e) => {

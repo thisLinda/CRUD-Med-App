@@ -13,7 +13,7 @@ import medsList from '../data';
 const Navigation = () => {
   const [meds, setMeds] = useState(medsList);
   // setting state on medsID got rid of undefined error...
-  const [medsId, setMedsId] = useState()
+  // const [medsId, setMedsId] = useState()
 
   // add new/created med to array with push
   const createMed = med => {
@@ -29,11 +29,16 @@ const Navigation = () => {
     setMeds(arr);
   };
 
+  // const deleteMed = medsId => {
+  //   const deleteMeds = meds.filter((m) => m._id !== medsId);
+  //   setMedsId(deleteMeds);
+  //   console.log('inside deleteMed: ')
+  // }
+
   const deleteMed = medsId => {
-    const deleteMeds = meds.filter((m) => m._id !== medsId);
-    setMedsId(deleteMeds);
+    setMeds(meds.filter((m) => m._id !== medsId));
     console.log('inside deleteMed: ')
-  }
+  };
 
   return(
     <Container>
@@ -61,7 +66,8 @@ const Navigation = () => {
               </Route>
               <Route exact path="/list">
                 {/* <MedTable med={med} updateMed={updateMed} deleteMed={deleteMed} />  */}
-                <MedTable meds={meds} key={medsId} updateMed={updateMed} deleteMed={deleteMed} />
+                {/* <MedTable meds={meds} key={medsId} updateMed={updateMed} deleteMed={deleteMed} /> */}
+                <MedTable meds={meds} updateMed={updateMed} deleteMed={deleteMed} />
               </Route>
             </Switch>
           </Router>
