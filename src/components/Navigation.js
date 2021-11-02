@@ -12,9 +12,6 @@ const Navigation = () => {
         <Nav.Link as={NavLink} to="/list">Medication List</Nav.Link>
         <Nav.Link as={NavLink} to="/">Home</Nav.Link>
         {/* using href breaks spa by refreshing the page and reloading the app */}
-        {/* <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/add">Add a New Medication</Nav.Link>
-        <Nav.Link href="/list">Medication List</Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

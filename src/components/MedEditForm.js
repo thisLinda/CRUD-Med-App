@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 
 export default function MedEditForm({med, deleteMed, onSubmit }) {
+  
   const [formData, setFormData] = useState(med);
 
   const handleChange = (e) => {
@@ -32,7 +33,7 @@ export default function MedEditForm({med, deleteMed, onSubmit }) {
       <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleDeleteClick}>
         Delete
       </Button>
-      <Button variant="contained" sendIcon={<SendIcon />} onClick={ () => onSubmit(formData) }>
+      <Button variant="contained" sendIcon={<SendIcon />} onClick={ () => onSubmit(formData)}>
         Submit
       </Button>
       </td>

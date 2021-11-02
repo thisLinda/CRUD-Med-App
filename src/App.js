@@ -36,16 +36,16 @@ const App = () => {
   return (
     <Router>
       <Navigation />
-      <Container className="App">
+      <Container>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
           <Route exact path="/add">
-            <MedForm createMed={createMed} />
+            <MedCreateForm createMed={createMed} />
           </Route>
           <Route exact path="/list">
             <MedTable meds={meds} updateMed={updateMed} deleteMed={deleteMed} />
+          </Route>
+          <Route exact path="/">
+            <Home />
           </Route>
         </Switch>
       </Container>
