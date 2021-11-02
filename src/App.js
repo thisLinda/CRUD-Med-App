@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Navigation from './components/Navigation';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/Home';
-import MedForm from './components/MedForm';
+import MedCreateForm from './components/MedCreateForm';
 import MedTable from './components/MedTable';
 import medsList from './data';
 
