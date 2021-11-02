@@ -1,7 +1,7 @@
 // this component takes a new medication added by the user and displays it in a table
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import UpdateDeleteMed from './UpdateDeleteMed';
+import UpdateDeleteMed from './MedView';
 
 // props received from CreateMeds
 const MedTable = (props) => {

@@ -3,9 +3,9 @@ import './App.css';
 import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Navigation from './components/Navigation';
-mport { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/Home';
-import MedCreateForm from './components/MedCreateForm';
+import MedForm from './components/MedForm';
 import MedTable from './components/MedTable';
 import medsList from './data';
 
@@ -42,7 +42,7 @@ const App = () => {
             <Home />
           </Route>
           <Route exact path="/add">
-            <MedCreateForm createMed={createMed} />
+            <MedForm createMed={createMed} />
           </Route>
           <Route exact path="/list">
             <MedTable meds={meds} updateMed={updateMed} deleteMed={deleteMed} />
