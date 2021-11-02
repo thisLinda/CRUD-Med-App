@@ -1,19 +1,23 @@
 // this component is to update and delete a med from the table, functionality to achieve is turning the individual table fields into a form for inputs
-import React, { useEffect, useState } from 'react';
-// import React, {useState} from 'react';
+// import React, { useEffect, useState } from 'react';
+import React, {useState} from 'react';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 
 const UpdateDeleteMed = ({med, medsId, updateMed, deleteMed}) => {
+  // 
   const [isEdit, setIsEdit] = useState(false);
 
-  const [formData, setFormData] = useState({
-    brandName: "",
-    genericName: "",
-    reaction: "",
-    submitted: false,
-  });
+  const [formData, setFormData] = useState(med) 
+  // {
+  //   // don't need use effect if I don't have empty fields here
+  //   brandName: "",
+  //   genericName: "",
+  //   reaction: "",
+  //   // 
+  //   submitted: false,
+  // });
 
   const handleChange = (e) => {
     setFormData({
@@ -43,12 +47,13 @@ const UpdateDeleteMed = ({med, medsId, updateMed, deleteMed}) => {
   const {brandName, genericName, reaction} = med;
 // you're using useEffect to fill the form if they're editing. I don't think you need to do that. You should be able to just set the initalState of the form data to be the data in med.
   // https://reactjs.org/docs/hooks-effect.html
-  useEffect(() => {
-  // initialState(() => {
-    if (isEdit) {
-      setFormData(med);
-    }
-  }, [isEdit]);
+  // useEffect(() => {
+  // // initialState(() => {
+  //   if (isEdit) {
+  //     //
+  //     setFormData(med);
+  //   }
+  // }, [isEdit]);
 
   if (isEdit) {
     return (
