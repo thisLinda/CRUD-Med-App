@@ -3,6 +3,7 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import MedView from './MedView';
 
+
 // props received from CreateMeds
 const MedTable = (props) => {
  return (
@@ -15,7 +16,6 @@ const MedTable = (props) => {
       </tr>
     </thead>
     <tbody>
-    {/* {arrayOfData.map(dataItem => <NameOfComponent propName={dataItem} key={dataItem.uniqueProperty} /> )} */}
       {props.meds.map(med => {
           return (
             <MedView med={med} updateMed={props.updateMed} deleteMed={props.deleteMed} />

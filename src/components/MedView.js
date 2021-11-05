@@ -14,7 +14,6 @@ const MedView = ({med, updateMed, deleteMed}) => {
   }
 
   const handleDeleteClick = (e) => {
-    console.log("this is genericName in handleDeleteClick " + genericName) // 
     deleteMed(med._id);
   }
 
@@ -28,6 +27,7 @@ const MedView = ({med, updateMed, deleteMed}) => {
   if (isEdit) {
     return <MedEditForm med={med} deleteMed={deleteMed} onSubmit={handleSubmit} /> 
   }
+
   return (
     <tr>
       <td>{brandName}</td>
@@ -39,8 +39,6 @@ const MedView = ({med, updateMed, deleteMed}) => {
       </Button>
       <Button variant="contained" sendIcon={<SendIcon />} onClick={handleEditClick}>
         Edit
-        {/* ternary for debugging if handleChange code is working */}
-        {/* Edit: { isEdit ? "true" : "false" } */}
       </Button>
       </td>
     </tr>
