@@ -4,10 +4,15 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import MedEditForm from './MedEditForm';
+import { useHistory, useRouteMatch } from 'react-router';
 
 const MedView = ({med, updateMed, deleteMed}) => {
 
   const [isEdit, setIsEdit] = useState(false);
+  // const match = useRouteMatch();
+  // const history = useHistory();
+
+    // const[meds, setMeds] = useState([])
 
   const handleEditClick = (e) => {
     setIsEdit(!isEdit);
