@@ -1,12 +1,12 @@
-# This is ~~incomplete.~~ ... now COMPLETE for project requirements!
+## This is ~~incomplete.~~ ... now COMPLETE for project requirements!
 ## ~~But it's getting there 🙂~~  Got it!
 ## Moving on to:
 
-#### Do not need `useEffect` in updateDeleteMed
+- Do not need `useEffect` in updateDeleteMed
 - Improve styling
 - Improve responsiveness
 - Address accessibility
-- Refine components (`updateDeleteMed`)
+- ~~Refine components~~
 - Find API, hook up search including search by both generic and brand names, severity
 - Add field for degree of severity
 

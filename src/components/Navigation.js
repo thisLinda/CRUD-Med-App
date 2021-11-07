@@ -1,10 +1,10 @@
 import React from 'react';
-import {Navbar, Nav} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return(
-    <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg" sticky="top">
+    <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg" sticky="top" "justify-content-end">
       <Navbar.Brand as={NavLink} to="/">Medications with Possible Severe Adverse Reaction on Swallow Function</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
