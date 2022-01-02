@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+.navbar-brand {
+  margin-left: .5rem;
+}
+
 /* a.navbar-brand {
   display: flex;
   flex-direction: column;

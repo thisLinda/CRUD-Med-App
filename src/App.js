@@ -1,6 +1,6 @@
 // receives meds from CreateMeds and displays in a table, TODO: route to different pages
 import './App.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/Home';
@@ -34,8 +34,8 @@ const App = () => {
 
   return (
     <Router>
-      <Navigation />
       <Container>
+      <Navigation />
         <Switch>
           <Route exact path="/">
             <Home/>
