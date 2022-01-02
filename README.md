@@ -3,7 +3,7 @@
 ## What Am I Looking At?
 That's a modified barium swallow study (MBS), an instrumental evaluation of swallow function conducted by a speech-language pathologist (SLP) in conjunction with a radiologist.
 
-As I transition from my career as an SLP in rehab to a full stack developer I can both fulfill my intention to create and distribute apps to support SLPs as I advance my coding skill.
+As I transition from my career as an SLP in rehab to a full stack developer I can both fulfill my intention to create and distribute apps to support SLPs and advance my coding skill.
 
 Swallow function can be impacted by medication and it's important to know if your patient has this added risk. This app is intended to be a quick source for the SLP to identify those medications which impact swallow and create a personal list if desired.
 
