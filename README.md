@@ -1,8 +1,12 @@
 <div id="top"></div>
 
+## Check it Out
+Deployed on AWS Amplify https://main...amplifyapp.com 
+
 <img src="./public/crud-med-app.gif?raw=true" width="100%" />
 
 ## What Am I Looking At?
+[NOTE: GIF link broken 1/11/22]
 That's a brief glimpse of a modified barium swallow study (MBS), an instrumental evaluation of swallow function conducted by a speech-language pathologist (SLP) in conjunction with a radiologist.
 
 As I transition from my career as an SLP in rehab to a full stack developer it is my intention to create apps to support SLPs in turn advancing my coding skills.
