@@ -1,7 +1,7 @@
 <div id="top"></div>
 
 ## Check it Out
-Deployed on AWS Amplify https://main...amplifyapp.com 
+Deployed on AWS Amplify https://main.d3b8fb3unre6k6.amplifyapp.com/
 
 <img src="./public/crud-med-app.gif?raw=true" width="100%" />
 
