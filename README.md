@@ -4,6 +4,7 @@
 Deployed on AWS Amplify https://main...amplifyapp.com 
 
 <img src="./public/crud-med-app.gif?raw=true" width="100%" />
+
 ## What Am I Looking At?
 
 That's a brief glimpse of a modified barium swallow study (MBS), an instrumental evaluation of swallow function conducted by a speech-language pathologist (SLP) in conjunction with a radiologist.
